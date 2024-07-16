@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>grid layout</title>
+    <style>
+        *{
+            margin: 0px;
+        }
+        .number{
+            display: grid;
+            padding: 20px;
+            font-size: 15rem;
+            justify-content: center;
+            align-items: center;
+        }
+        .c1{
+            display: grid;
+            grid-template-columns: repeat(2,1fr);
+            gap: 2px;
+            height: 100vh;
+            width: 100vw;
+            /* background-color: black; */
+            /* padding: 200px; */
+        }
+        .c101{
+            display: grid;
+            grid-template-rows: 50vh 50vh;
+        }
+        .c1001{
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+        }
+        .c2{
+            display: grid;
+            grid-template-columns: 30vw 70vw;
+            gap: 20px;
+            /* border: 5px solid black; */
+            grid-template-rows: repeat(2, 1fr);
+            row-gap: 20px;
+            
+        }
+        body{
+            display: grid;
+            gap:10px;
+        }
+        .container{
+            display: grid;
+            grid-template-columns: 25vw 75vw;
+            grid-template-rows: max-content;
+            gap: 10px;
+
+        }
+        .grid{
+            /* background-color: black; */
+            /* border: 2px solid black; */
+            margin: auto;
+        }
+        .container2{
+            display: grid;
+            grid-template-columns: 50vw 50vw;
+            grid-template-rows: max-content;
+            gap: 10px;
+
+        }
+        .con2{
+            grid-row-start: 1;
+            grid-row-end: 2;
+            grid-column-start: 2;
+            
+        }
+        @media screen and (max-width: 576px){
+            .c1{
+                grid-template-columns: none;
+                grid-template-rows:25vh 75vh;
+            }
+            .c101{
+                grid-template-columns: none;
+                grid-template-rows:25vh 50vh ;
+            }
+            .c1001{
+                grid-template-columns: none;
+                grid-template-rows: 25vh 25vh;
+            }
+            .container, .container2{
+                display: block;
+            }
+
+        }
+    </style>
+</head>
+<body>
+    <section class="c1">
+        <div class="number" style="background-color: pink;">1</div>
+        <section class="c101">
+            <div class="number" style="background-color: brown;">2</div>
+            <nav class="c1001">
+                <div class="number" style="background-color: aqua;">3</div>
+                <div class="number" style="background-color: blueviolet;">4</div>
+            </nav>
+        </section>
+    </section>
+    <div class="container">
+        <div class="grid"><img style="width: 100%;" src="./assets/rocking heart.jpg" alt="rocking heart"></div>
+        <div class="grid con">This is a image which means that people changes over time. Actually pain is the best fuel of an artist (a dialouge from CHUP) movie which is an Malaylam movie. Let there be motion</div>
+        <div class="grid"><img style="width: 100%;" src="./assets/toron1.jpg" alt="the toron"></div>
+        <div class="grid con"> This is the name I used to call a one of my favorite person. So what does it Actually means? It Actually mean the changes mostly the rate of changes in velocity. Life is beautiful and beauty is velocity.</div>
+    </div>
+    <div class="container2">
+        <div class="grid"><img style="width: 100%;" src="./assets/rocking heart.jpg" alt="rocking heart"></div>
+        <div class="grid con">This is a image which means that people changes over time. Actually pain is the best fuel of an artist (a dialouge from CHUP) movie which is an Malaylam movie. Let there be motion</div>
+        <div class="grid"><img style="width: 100%;" src="./assets/toron1.jpg" alt="the toron"></div>
+        <div class="grid con2"> This is the name I used to call a one of my favorite person. So what does it Actually means? It Actually mean the changes mostly the rate of changes in velocity. Life is beautiful and beauty is velocity.</div>
+
+    </div>
+</body>
+</html>
